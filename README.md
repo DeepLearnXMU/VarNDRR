@@ -5,9 +5,7 @@ Source code for "variational neural discourse relation recognizer"
 If you use this code, please cite our paper:
 ```
 @InProceedings{Zhang:EMNLP:2016:VarNDrr,
-  author    = {Biao Zhang and
-               Deyi Xiong and
-               Jinsong Su},
+  author    = {Biao Zhang, Deyi Xiong, Jinsong Su, Qun Liu, Rongrong Ji, Hong Duan, Min Zhang},
   title     = {Variational Neural Discourse Relation Recognizer},
   booktitle = {Proc. of EMNLP},
   year      = {2016},
