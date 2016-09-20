@@ -12,8 +12,11 @@ import numpy as np
 import theano
 import theano.tensor as T
 
+"""
+This code borrows some ideas from "https://github.com/y0ast/Variational-Autoencoder"
+"""
 class VarNDrr:
-    def __init__(self, 
+    def __init__(self,
             L_encoder,      # hidden for encoder dimension for label
             L_decoder,      # hidden for decoder dimension for label
             H_arg1_encoder, # hidden for encoder dimension for argument one
@@ -56,7 +59,7 @@ class VarNDrr:
 
     def initParams(self):
     	"""
-        initialize all Ws and bs using gaussian distribution from numpy, 
+        initialize all Ws and bs using gaussian distribution from numpy,
         these CPU variables is then converted into GPU variables via theano
         """
         # layer one
@@ -263,7 +266,7 @@ class VarNDrr:
             miniBatch[i][_miniBatch] = 1.0
 
         return miniBatch
-    
+
     def getBatch(self, N, batch_size, shuffle=True):
         """Used to shuffle the dataset at each iteration."""
         idxList = np.arange(N, dtype="int64")
@@ -474,7 +477,7 @@ if __name__ == "__main__":
               % (j, encoder.lowerbound/N, end - begin))
             lowerbound = np.append(lowerbound,encoder.lowerbound)
             begin = end
-    
+
             if np.isnan(encoder.lowerbound):
                 print 'Nan dectected'
                 break
@@ -483,7 +486,7 @@ if __name__ == "__main__":
                 testlowerbound = np.append(testlowerbound,encoder.getLowerBound(test_arg1, test_arg2, test_lbl))
                 print "Calculating test lowerbound, lower bound = %.2f" % testlowerbound[-1]
 
-    
+
             dev_res = encoder.getPrediction(dev_arg1, dev_arg2, dev_lbl)
             tun_dev_res = get_f_score(dev_res)
             prefix = "plain"
