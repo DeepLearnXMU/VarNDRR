@@ -2,7 +2,7 @@
 
 Source code for "variational neural discourse relation recognizer"
 
-If you use this code, please cite our paper:
+If you use this code, please cite <a href="http://www.aclweb.org/anthology/D/D16/D16-1037.pdf">our paper</a>:
 ```
 @InProceedings{zhang-EtAl:2016:EMNLP20161,
   author    = {Zhang, Biao  and  Xiong, Deyi  and  su, jinsong  and  Liu, Qun  and  Ji, Rongrong  and  Duan, Hong  and  Zhang, Min},
