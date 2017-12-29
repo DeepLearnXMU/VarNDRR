@@ -17,6 +17,10 @@ If you use this code, please cite <a href="http://www.aclweb.org/anthology/D/D16
 }
 ```
 
+## How to prepare dataset
+
+We provide a simple demo case in the `data/demo` directory.
+
 ## How to Run?
 
 Simply Run
